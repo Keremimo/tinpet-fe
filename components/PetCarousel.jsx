@@ -6,6 +6,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import PetCard from "./PetCard";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 const PetCarousel = async () => {
 
@@ -38,6 +40,7 @@ const PetCarousel = async () => {
                 <p><strong>Size:</strong> {pet.size}</p>
                 <p><strong>Description:</strong> {pet.description}</p>
               </div>
+              <Link href="/appointment"><Button className="bg-customBrown text-white">Make an appointment</Button></Link>
             </CarouselItem>
           ))}
         </CarouselContent>

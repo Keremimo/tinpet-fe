@@ -40,7 +40,7 @@ function PetCard ({ petCard, showSeeMore = true }) {
                 <CardHeader>
                     <CardTitle>{petCard.name}</CardTitle>
                 </CardHeader>
-                <Button className="mb-3" onClick={handleSeeMore} style={{ display: showSeeMore ? 'inline-block' : 'none' }}>
+                <Button className="mb-3 bg-customBrown text-white" onClick={handleSeeMore} style={{ display: showSeeMore ? 'inline-block' : 'none' }}>
                     See more
                 </Button>
             </Card>
