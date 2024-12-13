@@ -41,8 +41,8 @@ const questions = [
     id: 4,
     question: "Do you have experience training pets or would you prefer a pet that's already trained?",
     options: [
-      { value: true, text: "I can train a pet" },
-      { value: false, text: "I prefer a trained pet" }
+      { value: false, text: "I can train a pet" },
+      { value: true, text: "I prefer a trained pet" }
     ]
   },
 

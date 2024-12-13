@@ -6,16 +6,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import PetCard from "./PetCard";
-// import animals from "@/public/pets.json";
-// import { Slider } from "@/components/ui/slider";
-
-
 
 const PetCarousel = async () => {
 
   const matchingPets = JSON.parse(localStorage.getItem("matchingPets")) || [];
-//TODO add array of matched animals instead of this placeholder 
-  // const dogCards = animals.animals.dogs;
   const speciesToFilter = ["Dog", "Cat", "Bird", "Fish"];
   const petCards = matchingPets.filter((item) =>
     speciesToFilter.includes(item.species)
@@ -29,35 +23,28 @@ const PetCarousel = async () => {
     );
   }
 
-  return (
-      <>
-      <Carousel className="w-[250px] left-1/2 translate-x-[-125px]">
-        <CarouselContent>
-            {petCards.map((pet, index) => (
-            <CarouselItem key={index}>
-                <PetCard petCard={pet} index={index} />
-                {/* <p className="mt-[20px]">energy level:</p>
-                <div className="w-[250px] flex justify-self-center m-[20px] mt-[10px]">
-                  <Slider defaultValue={[animals.animals.dogs[index].energy]} max={100} step={1} disabled></Slider>
-                </div> */}
-                <div className="w-[250px] flex flex-col justify-self-center m-[10px] gap-[20px]">
-                  <p><strong>Name:</strong> {pet.name}</p>
-                  <p><strong>Age:</strong> {pet.age}</p>
-                  <p><strong>Breed:</strong> {pet.breed}</p>
-                  <p><strong>Sex:</strong> {pet.gender}</p>
-                  <p><strong>Size:</strong> {pet.size}</p>
-                  <p><strong>Description:</strong> {pet.description}</p>
-                  {/* <p>dog friendly: {animals.animals.dogs[index].dogfriendly ? "yes" : "no"}</p>
-                  <p>kid friendly: {animals.animals.dogs[index].kidfriendly ? "yes" : "no"}</p> */}
-                </div>
-            </CarouselItem>
-            ))}
+return (
+    <>
+    <Carousel className="w-[n250px] left-1/2 translate-x-[-125px]">
+      <CarouselContent>
+        {petCards.map((pet, index) => (
+          <CarouselItem key={index}>
+              <PetCard petCard={pet} index={index} />
+              <div className="w-[250px] flex flex-col justify-self-center m-[10px] gap-[20px]">                  <p><strong>Name:</strong> {pet.name}</p>
+                <p><strong>Age:</strong> {pet.age}</p>
+                <p><strong>Breed:</strong> {pet.breed}</p>
+                <p><strong>Sex:</strong> {pet.gender}</p>
+                <p><strong>Size:</strong> {pet.size}</p>
+                <p><strong>Description:</strong> {pet.description}</p>
+              </div>
+          </CarouselItem>
+          ))}
         </CarouselContent>
         <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-      </>
-    );
-  }
+      <CarouselNext />
+    </Carousel>
+    </>
+  );
+}
 
 export default PetCarousel;
