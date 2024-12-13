@@ -23,27 +23,28 @@ const PetCarousel = async () => {
     );
   }
 
-return (
-    <>
-    <Carousel className="w-[n250px] left-1/2 translate-x-[-125px]">
-      <CarouselContent>
-        {petCards.map((pet, index) => (
-          <CarouselItem key={index}>
+  return (
+    <div className="flex justify-center items-center h-full w-full">
+      <Carousel className="w-[250px]">
+        <CarouselContent>
+          {petCards.map((pet, index) => (
+            <CarouselItem key={index}>
               <PetCard petCard={pet} index={index} />
-              <div className="w-[250px] flex flex-col justify-self-center m-[10px] gap-[20px]">                  <p><strong>Name:</strong> {pet.name}</p>
+              <div className="w-[250px] flex flex-col justify-self-center m-[10px] gap-[20px]">
+                <p><strong>Name:</strong> {pet.name}</p>
                 <p><strong>Age:</strong> {pet.age}</p>
                 <p><strong>Breed:</strong> {pet.breed}</p>
                 <p><strong>Sex:</strong> {pet.gender}</p>
                 <p><strong>Size:</strong> {pet.size}</p>
                 <p><strong>Description:</strong> {pet.description}</p>
               </div>
-          </CarouselItem>
+            </CarouselItem>
           ))}
         </CarouselContent>
         <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
-    </>
+        <CarouselNext />
+      </Carousel>
+    </div>
   );
 }
 
