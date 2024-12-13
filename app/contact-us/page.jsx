@@ -76,8 +76,9 @@ const ContactPage = () => {
             How can I contact you?
           </AccordionTrigger>
           <AccordionContent className="text-md ">
-            You can reach us via email at <a href="mailto:info@tinpet.com" className="text-blue-500 hover:underline">info@tinpet.com</a>, or call us at <strong>(123) 456-7890</strong>.<br />
-            Would you like to make an appointment? Choose a date <Link href="/appointment" className="font-semibold underline">here</Link>.
+          You can email us at <a href="mailto:info@tinpet.com" className="text-blue-500 hover:underline">info@tinpet.com</a> or call <strong>(123) 456-7890</strong>.<br />
+            To make an appointment, <Link href="/appointment" className="font-semibold underline">choose a date here</Link>.<br />
+            To cancel an appointment, call us directly, and our team will assist you.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
