@@ -9,7 +9,7 @@ import { Button } from "./ui/button";
 import { useState } from "react";
 import PetModal from "./PetModal";
 
-function PetCard ({ petCard }) {
+function PetCard ({ petCard, showSeeMore = true }) {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedPet, setSelectedPet] = useState(null);
@@ -40,7 +40,7 @@ function PetCard ({ petCard }) {
                 <CardHeader>
                     <CardTitle>{petCard.name}</CardTitle>
                 </CardHeader>
-                <Button className="mb-3" onClick={handleSeeMore}>
+                <Button className="mb-3" onClick={handleSeeMore} style={{ display: showSeeMore ? 'inline-block' : 'none' }}>
                     See more
                 </Button>
             </Card>

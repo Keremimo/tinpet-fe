@@ -29,7 +29,7 @@ const PetCarousel = async () => {
         <CarouselContent>
           {petCards.map((pet, index) => (
             <CarouselItem key={index}>
-              <PetCard petCard={pet} index={index} />
+              <PetCard petCard={pet} showSeeMore={false}/>
               <div className="w-[250px] flex flex-col justify-self-center m-[10px] gap-[20px]">
                 <p><strong>Name:</strong> {pet.name}</p>
                 <p><strong>Age:</strong> {pet.age}</p>
